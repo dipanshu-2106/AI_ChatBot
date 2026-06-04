@@ -105,9 +105,9 @@ def server_error(error):
     return jsonify({'error': 'Server error'}), 500
 
 
-# ================= RENDER ENTRY =================
+# ================= HUGGING FACE ENTRY =================
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 7860))  # ← CHANGED: 5000 → 7860
     debug_mode = os.environ.get("FLASK_ENV") == "development"
     
     logger.info(f"🚀 Starting server on port {port}")
